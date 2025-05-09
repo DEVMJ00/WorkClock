@@ -1,4 +1,31 @@
-﻿Add-Type -AssemblyName System.Windows.Forms
+﻿# calculette.ps1
+
+<#
+.SYNOPSIS
+    Calculatrice de temps de travail permettant de calculer le temps total effectué en fonction des heures d'arrivée et de départ.
+    Elle permet également de calculer l'heure estimée de fin de journée en fonction d'un quota journalier.
+
+.DESCRIPTION
+    Cette application graphique permet à un utilisateur de saisir les heures d'arrivée et de départ pour le matin et l'après-midi,
+    puis de calculer le temps total effectué. L'utilisateur peut aussi entrer un quota horaire quotidien et obtenir l'heure estimée 
+    de fin de journée si la journée de travail n'est pas terminée.
+
+.PARAMETER Quota journalier
+    Le quota journalier à atteindre en heures, utilisé pour calculer l'heure estimée de fin.
+
+.PARAMETER Heures de travail
+    Les heures d'arrivée et de départ pour le matin et l'après-midi, au format "HH:mm", sont utilisées pour calculer le temps 
+    total effectué.
+
+.EXAMPLES
+    Exemple d'utilisation:
+    - L'utilisateur entre son quota journalier (par exemple, 8 heures).
+    - L'utilisateur saisit ses heures de travail pour le matin (ex. 08:00-12:00) et l'après-midi (ex. 13:00-17:00).
+    - Le calcul de l'heure estimée de fin ou du temps total effectué s'affiche dans l'interface graphique.
+#>
+
+
+Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 $margeGauche = 20 ;
 $margeDroite = 20 ;
