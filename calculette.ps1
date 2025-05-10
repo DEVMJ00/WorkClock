@@ -45,7 +45,9 @@ $pictureBox.Size = New-Object System.Drawing.Size(70, 50) # Taille de l'image
 $pictureBox.Location = New-Object System.Drawing.Point(0, 0) # Position à gauche du label
 $pictureBox.SizeMode = [System.Windows.Forms.PictureBoxSizeMode]::StretchImage
 $pictureBox.BackColor = [System.Drawing.Color]::Transparent
-$pictureBox.Image = [System.Drawing.Image]::FromFile("$PSScriptRoot\logo.png") 
+#$pictureBox.Image = [System.Drawing.Image]::FromFile("$PSScriptRoot\logo.png") 
+$logoPath = Join-Path (Get-Location) 'logo.png'
+$pictureBox.Image = [System.Drawing.Image]::FromFile($logoPath)
 $form.Controls.Add($pictureBox)
 
 # === HEADER GRAPHIQUE ===
