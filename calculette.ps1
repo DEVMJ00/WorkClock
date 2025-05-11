@@ -145,19 +145,15 @@ function Add-TimeInput {
 function Check-saisie($saisie) {
     $h = $saisie['Heure'].SelectedItem
     $m = $saisie['Minute'].SelectedItem
-
-    Write-Host "function Check-saisie > Valeur heure sélectionnée : '$h'"
-    Write-Host "function Check-saisie > Valeur minute sélectionnée : '$m'"
-
     if (-not $h -or -not $m) {
-        Write-Host "function Check-saisie > Erreur : une valeur n'est pas sélectionnée correctement."
+        Write-Host "Erreur : une valeur n'est pas sélectionnée correctement."
         return 0
     }
 
     try {
         return ([int]$h * 60) + [int]$m
     } catch {
-        Write-Host "function Check-saisie > Erreur de conversion : $_"
+        Write-Host "Erreur de conversion : $_"
         return 0
     }
 }
@@ -195,7 +191,6 @@ $calcButton.Add_Click({
     $arrivee_aprem = Check-saisie $inputApremArrivee
     $depart_aprem = Check-saisie $inputApremDepart
     $quota_journalier = Check-saisie $inputQuota
-    
 
 
     # Cas où l'après-midi est remplie
