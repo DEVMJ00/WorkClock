@@ -1,4 +1,11 @@
 # Calculatrice de Temps de Travail (WorkClock)
+
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/871eeeb1-80da-4dba-b753-416f4a54064d" alt="WorkClock screenshot" />
+</div>
+
+
 ## Description
 WorkClock est une application développée en PowerShell, permettant de calculer le temps de travail effectué durant une journée. Elle permet à l'utilisateur de saisir son quota de travail journalier, les heures de travail effectuées, et calcule soit le total des heures travaillées, soit l'heure de fin estimée si la journée n'est pas terminée.
 L'application fonctionne sans console visible grâce à une interface graphique, et peut être lancée en tant qu'exécutable (EXE) pour faciliter son utilisation.
