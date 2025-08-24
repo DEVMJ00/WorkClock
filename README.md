@@ -2,7 +2,7 @@
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/871eeeb1-80da-4dba-b753-416f4a54064d" alt="WorkClock screenshot" />
+  <img width="539" height="538" alt="image" src="https://github.com/user-attachments/assets/e5af4295-e064-4845-85c5-c2a35523bc1f" />
 </div>
 
 
