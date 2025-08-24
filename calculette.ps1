@@ -80,12 +80,34 @@ $labelHeader.Location = New-Object System.Drawing.Point($margeGauche, 16)
 
 # Label Footer
 $labelFooter = New-Object System.Windows.Forms.Label
-$labelFooter.Text = "Made with ❤ by DEVMJ   -   https://github.com/DEVMJ00"
-$labelFooter.ForeColor = [System.Drawing.Color]::Gainsboro
+$labelFooter.Text = "Made with ❤ by DEVMJ"
+$labelFooter.ForeColor = [System.Drawing.Color]::FromArgb(50, 179, 179, 179)  
 $labelFooter.Font = New-Object System.Drawing.Font("Segoe UI", 8, [System.Drawing.FontStyle]::Regular)
 $labelFooter.AutoSize = $true
-$labelFooter.Location = New-Object System.Drawing.Point(($form.ClientSize.Width - $labelFooter.Width - 300), ($form.ClientSize.Height - $labelFooter.Height - 10))
+#$labelFooter.Location = New-Object System.Drawing.Point(300,492)
+# Centrage horizontal et vertical
+$LabelFooter.Location = New-Object System.Drawing.Point(
+    (($Form.ClientSize.Width - $LabelFooter.Width) / 2),
+    ($Form.ClientSize.Height - $LabelFooter.Height - 1)
+)
+# Création du tooltip
+$toolTip = New-Object System.Windows.Forms.ToolTip
+$toolTip.SetToolTip($labelFooter, "En savoir plus")
+
+# Curseur en forme de main
+$LabelFooter.Cursor = [System.Windows.Forms.Cursors]::Hand
+
+# Action au clic -> ouvre GitHub
+$LabelFooter.Add_Click({
+    Start-Process "https://github.com/DEVMJ00/WorkClock"
+})
+
 $form.Controls.Add($labelFooter)
+
+
+
+
+
 
 
 function Add-TimeInput {
